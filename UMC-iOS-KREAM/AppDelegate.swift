@@ -1,11 +1,5 @@
-//
-//  AppDelegate.swift
-//  UMC-iOS-KREAM
-//
-//  Created by 엄민서 on 9/25/24.
-//
-
 import UIKit
+import SnapKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {

@@ -13,9 +13,11 @@
 		80384EA62CA3C0AC005BDEA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80384EA52CA3C0AC005BDEA6 /* Assets.xcassets */; };
 		80384EB22CA3C11E005BDEA6 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80384EB12CA3C11E005BDEA6 /* LoginModel.swift */; };
 		80384EB52CA3C14D005BDEA6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80384EB42CA3C14D005BDEA6 /* LoginView.swift */; };
+		CF90942A5381D5BFEBCFF895 /* Pods_UMC_iOS_KREAM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADC8BB9D2376B3246E650D6E /* Pods_UMC_iOS_KREAM.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0DE193E42E13CE78EA532668 /* Pods-UMC-iOS-KREAM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UMC-iOS-KREAM.release.xcconfig"; path = "Target Support Files/Pods-UMC-iOS-KREAM/Pods-UMC-iOS-KREAM.release.xcconfig"; sourceTree = "<group>"; };
 		80384E992CA3C0AA005BDEA6 /* UMC-iOS-KREAM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMC-iOS-KREAM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80384E9C2CA3C0AA005BDEA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80384E9E2CA3C0AA005BDEA6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		80384EAA2CA3C0AC005BDEA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80384EB12CA3C11E005BDEA6 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		80384EB42CA3C14D005BDEA6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		ADC8BB9D2376B3246E650D6E /* Pods_UMC_iOS_KREAM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UMC_iOS_KREAM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEDAB33EE06DB7FCD65B803F /* Pods-UMC-iOS-KREAM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UMC-iOS-KREAM.debug.xcconfig"; path = "Target Support Files/Pods-UMC-iOS-KREAM/Pods-UMC-iOS-KREAM.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF90942A5381D5BFEBCFF895 /* Pods_UMC_iOS_KREAM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		56618A5027E761F2F9FC570D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ADC8BB9D2376B3246E650D6E /* Pods_UMC_iOS_KREAM.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5F3CC509D0627C4E254FFE09 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DEDAB33EE06DB7FCD65B803F /* Pods-UMC-iOS-KREAM.debug.xcconfig */,
+				0DE193E42E13CE78EA532668 /* Pods-UMC-iOS-KREAM.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		80384E902CA3C0AA005BDEA6 = {
 			isa = PBXGroup;
 			children = (
 				80384E9B2CA3C0AA005BDEA6 /* UMC-iOS-KREAM */,
 				80384E9A2CA3C0AA005BDEA6 /* Products */,
+				5F3CC509D0627C4E254FFE09 /* Pods */,
+				56618A5027E761F2F9FC570D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,9 +123,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 80384EAD2CA3C0AC005BDEA6 /* Build configuration list for PBXNativeTarget "UMC-iOS-KREAM" */;
 			buildPhases = (
+				D3D73F66F84FE5DE5E54E0DD /* [CP] Check Pods Manifest.lock */,
 				80384E952CA3C0AA005BDEA6 /* Sources */,
 				80384E962CA3C0AA005BDEA6 /* Frameworks */,
 				80384E972CA3C0AA005BDEA6 /* Resources */,
+				B22FCF91C539F1ABF8F89626 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -154,6 +181,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B22FCF91C539F1ABF8F89626 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UMC-iOS-KREAM/Pods-UMC-iOS-KREAM-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UMC-iOS-KREAM/Pods-UMC-iOS-KREAM-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UMC-iOS-KREAM/Pods-UMC-iOS-KREAM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3D73F66F84FE5DE5E54E0DD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UMC-iOS-KREAM-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		80384E952CA3C0AA005BDEA6 /* Sources */ = {
@@ -292,6 +361,7 @@
 		};
 		80384EAE2CA3C0AC005BDEA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DEDAB33EE06DB7FCD65B803F /* Pods-UMC-iOS-KREAM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -318,6 +388,7 @@
 		};
 		80384EAF2CA3C0AC005BDEA6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DE193E42E13CE78EA532668 /* Pods-UMC-iOS-KREAM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
