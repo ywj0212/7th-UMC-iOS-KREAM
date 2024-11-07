@@ -1,6 +1,6 @@
 import UIKit
 
-class TapBarViewController: UIViewController {
+class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

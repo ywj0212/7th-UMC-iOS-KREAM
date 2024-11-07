@@ -1,284 +1,147 @@
 import UIKit
 
-class MyPageView: UIView {
-    let upperUIFrame: UIView = {
-        let view = UIView()
-        view.backgroundColor = .white
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
+class EditProfileView: UIView {
+    private let viewLabel : UILabel = {
+        let label = UILabel()
+        label.text = "프로필 관리"
+        label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        label.textColor = .black
+        return label
     }()
-    
-    let topComponentGroup: UIView = {
-        let view = UIView()
-        view.backgroundColor = .white
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-    
-    let topButtonGroup: UIView = {
-        let view = UIView()
-        view.backgroundColor = .white
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-    
-    let profileInfoGroup: UIView = {
-        let view = UIView()
-        view.backgroundColor = .white
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-    
-    let profileTextGroup: UIView = {
-        let view = UIView()
-        view.backgroundColor = .white
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-    
-    let profileButtonGroup: UIView = {
-        let view = UIView()
-        view.backgroundColor = .white
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-    
-    let followInfoGroup: UIView = {
-        let view = UIView()
-        view.backgroundColor = .white
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-    
-    let settingButton: UIButton = {
-        let button = UIButton()
-        button.setImage(UIImage(named: "setting"), for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
-    
-    let cameraButton: UIButton = {
-        let button = UIButton()
-        button.setImage(UIImage(named: "camera"), for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
-    
-    let profileImageView: UIImageView = {
+
+    // Profile Image
+    public var profileImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "profile")
-        imageView.contentMode = .scaleAspectFill
-        imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
+
+    // Email Field
+    public let emailField: UITextField = {
+        let textField = UITextField()
+        textField.text = "example@naver.com"
+        textField.placeholder = "새로운 이메일을 입력해주세요!"
+        textField.font = UIFont.systemFont(ofSize: 14)
+        textField.borderStyle = .roundedRect
+        textField.isUserInteractionEnabled = false
+        return textField
+    }()
     
-    let nameLabel: UILabel = {
+    // Password Field
+    public let pwdField: UITextField = {
+        let textField = UITextField()
+        textField.text = "**********"
+        textField.placeholder = "새로운 비밀번호를 입력해주세요!"
+        textField.isSecureTextEntry = true
+        textField.font = UIFont.systemFont(ofSize: 14)
+        textField.borderStyle = .roundedRect
+        textField.isUserInteractionEnabled = false
+        return textField
+    }()
+    
+    // Profile Information Group Label
+    private let groupLabel: UILabel = {
         let label = UILabel()
-        label.text = "Jeong_iOS"
-        label.font = UIFont.systemFont(ofSize: 16, weight: .medium)
-        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "프로필 정보"
+        label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
         return label
     }()
     
-    let followersLabel: UILabel = {
-        let label = UILabel()
-        label.text = "팔로워"
-        label.font = UIFont.systemFont(ofSize: 12, weight: .medium)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
-    let followerCountLabel: UILabel = {
-        let label = UILabel()
-        label.text = "326"
-        label.font = UIFont.systemFont(ofSize: 12, weight: .bold)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
-    let followingLabel: UILabel = {
-        let label = UILabel()
-        label.text = "팔로잉"
-        label.font = UIFont.systemFont(ofSize: 12, weight: .medium)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
-    let followingCountLabel: UILabel = {
-        let label = UILabel()
-        label.text = "20"
-        label.font = UIFont.systemFont(ofSize: 12, weight: .bold)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
-    let profileManagementButton: UIButton = {
+    // Change Buttons for Email and Password
+    public let emailChangeButton: UIButton = {
         let button = UIButton()
-        button.setTitle("프로필 관리", for: .normal)
+        button.setTitle("변경", for: .normal)
         button.setTitleColor(.black, for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 9, weight: .medium)
-        button.backgroundColor = .white
-        button.layer.borderWidth = 0.8
-        button.layer.borderColor = CGColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 1)
-        button.layer.cornerRadius = 8
-        button.translatesAutoresizingMaskIntoConstraints = false
+        button.layer.borderWidth = 1
+        button.layer.cornerRadius = 5
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+        return button
+    }()
+
+    public let pwdChangeButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("변경", for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        button.layer.borderWidth = 1
+        button.layer.cornerRadius = 5
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
         return button
     }()
     
-    let profileShareButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("프로필 공유", for: .normal)
-        button.setTitleColor(.black, for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 9, weight: .medium)
-        button.backgroundColor = .white
-        button.layer.borderWidth = 0.8
-        button.layer.borderColor = CGColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 1)
-        button.layer.cornerRadius = 8
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
+    // StackView for Email and Password
+    private lazy var emailStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [emailField, emailChangeButton])
+        stackView.axis = .horizontal
+        stackView.spacing = 8
+        return stackView
     }()
     
-    let bottomView: UIView = {
+    private lazy var pwdStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [pwdField, pwdChangeButton])
+        stackView.axis = .horizontal
+        stackView.spacing = 8
+        return stackView
+    }()
+    
+    // Profile Info Container
+    private lazy var profileInfoView: UIView = {
         let view = UIView()
-        view.backgroundColor = .white
-        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.setupViews()
-        self.setupLayout()
-        self.backgroundColor = .gray
+        self.backgroundColor = .white
+        setupView()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setupViews() {
-        topButtonGroup.addSubview(settingButton)
-        topButtonGroup.addSubview(cameraButton)
-        topComponentGroup.addSubview(topButtonGroup)
+    private func setupView() {
+        addSubview(viewLabel)
+        addSubview(profileImageView)
+        addSubview(profileInfoView)
+        profileInfoView.addSubview(groupLabel)
+        profileInfoView.addSubview(emailStackView)
+        profileInfoView.addSubview(pwdStackView)
         
-        profileInfoGroup.addSubview(profileImageView)
-        profileTextGroup.addSubview(nameLabel)
-        
-        followInfoGroup.addSubview(followersLabel)
-        followInfoGroup.addSubview(followerCountLabel)
-        followInfoGroup.addSubview(followingLabel)
-        followInfoGroup.addSubview(followingCountLabel)
-        
-        profileTextGroup.addSubview(followInfoGroup)
-        profileInfoGroup.addSubview(profileTextGroup)
-        topComponentGroup.addSubview(profileInfoGroup)
-        
-        profileButtonGroup.addSubview(profileManagementButton)
-        profileButtonGroup.addSubview(profileShareButton)
-        topComponentGroup.addSubview(profileButtonGroup)
-        
-        upperUIFrame.addSubview(topComponentGroup)
-        
-        addSubview(upperUIFrame)
-        addSubview(bottomView)
+        setupConstraints()
     }
     
-    private func setupLayout() {
-        upperUIFrame.snp.makeConstraints {
-            $0.top.equalToSuperview()
-            $0.leading.equalToSuperview()
-            $0.trailing.equalToSuperview()
-            $0.height.equalTo(297)
+    private func setupConstraints() {
+        viewLabel.snp.makeConstraints {
+            $0.top.equalTo(safeAreaLayoutGuide).offset(20)
+            $0.centerX.equalToSuperview()
         }
-        topComponentGroup.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(75)
-            $0.leading.equalToSuperview().offset(32.5)
-            $0.trailing.equalToSuperview().inset(32.5)
-            $0.bottom.equalToSuperview().inset(29)
-        }
-        topButtonGroup.snp.makeConstraints {
-            $0.top.edges.equalToSuperview()
-            $0.height.equalTo(25)
-            $0.bottom.equalToSuperview().inset(168)
-        }
-        settingButton.snp.makeConstraints {
-            $0.top.equalToSuperview()
-            $0.leading.equalToSuperview()
-            $0.width.equalTo(25)
-            $0.height.equalTo(25)
-        }
-        cameraButton.snp.makeConstraints {
-            $0.top.equalToSuperview()
-            $0.trailing.equalToSuperview()
-            $0.width.equalTo(25)
-            $0.height.equalTo(25)
-        }
-        profileInfoGroup.snp.makeConstraints {
-            $0.top.equalTo(topButtonGroup.snp.bottom).offset(26)
-            $0.leading.equalToSuperview()
-            $0.trailing.equalToSuperview()
-            $0.height.equalTo(90)
-        }
-        profileImageView.snp.makeConstraints {
-            $0.top.equalToSuperview()
-            $0.leading.equalToSuperview()
+        profileImageView.snp.makeConstraints { $0.centerX.equalToSuperview()
+            $0.top.equalTo(viewLabel.snp.bottom).offset(52)
             $0.height.equalTo(90)
             $0.width.equalTo(90)
         }
-        profileTextGroup.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(21)
-            $0.bottom.equalToSuperview().inset(21)
-            $0.leading.equalTo(profileImageView.snp.trailing).offset(18)
-            $0.trailing.equalToSuperview()
-        }
-        nameLabel.snp.makeConstraints {
-            $0.top.equalToSuperview()
-            $0.height.equalTo(23)
-        }
-        followInfoGroup.snp.makeConstraints {
-            $0.top.equalTo(nameLabel.snp.bottom).offset(6)
-            $0.leading.equalToSuperview()
-            $0.trailing.equalToSuperview()
-            $0.height.equalTo(19)
-        }
-        followersLabel.snp.makeConstraints {
-            $0.leading.equalToSuperview()
-            $0.height.equalToSuperview()
-        }
-        followerCountLabel.snp.makeConstraints {
-            $0.leading.equalTo(followersLabel.snp.trailing).offset(3)
-            $0.height.equalToSuperview()
-        }
-        followingLabel.snp.makeConstraints {
-            $0.leading.equalTo(followerCountLabel.snp.trailing).offset(8)
-            $0.height.equalToSuperview()
-        }
-        followingCountLabel.snp.makeConstraints {
-            $0.leading.equalTo(followingLabel.snp.trailing).offset(3)
-            $0.height.equalToSuperview()
+        
+        profileInfoView.snp.makeConstraints { $0.top.equalTo(profileImageView.snp.bottom).offset(30)
+            $0.leading.trailing.equalToSuperview().inset(16)
+            $0.height.equalTo(200)
         }
         
-        profileButtonGroup.snp.makeConstraints {
-            $0.top.equalTo(profileInfoGroup.snp.bottom).offset(26)
-            $0.leading.equalToSuperview()
-            $0.trailing.equalToSuperview()
-            $0.height.equalTo(26)
+        groupLabel.snp.makeConstraints { $0.top.equalToSuperview().offset(16)
+            $0.leading.equalToSuperview().offset(16)
         }
-        profileManagementButton.snp.makeConstraints {
-            $0.leading.equalToSuperview()
-            $0.height.equalToSuperview()
+        
+        emailChangeButton.snp.makeConstraints {
+            $0.width.equalTo(58)
         }
-        profileShareButton.snp.makeConstraints {
-            $0.leading.equalTo(profileManagementButton.snp.trailing).offset(14)
-            $0.trailing.equalToSuperview()
-            $0.width.equalTo(profileManagementButton)
-            $0.height.equalToSuperview()
+        pwdChangeButton.snp.makeConstraints {
+            $0.width.equalTo(58)
         }
-        bottomView.snp.makeConstraints {
-            $0.top.equalTo(topComponentGroup.snp.bottom).offset(24)
-            $0.bottom.equalToSuperview()
-            $0.leading.equalToSuperview()
-            $0.trailing.equalToSuperview()
+        
+        emailStackView.snp.makeConstraints { $0.top.equalTo(groupLabel.snp.bottom).offset(23)
+            $0.leading.trailing.equalToSuperview().inset(16)
+        }
+        
+        pwdStackView.snp.makeConstraints { $0.top.equalTo(emailStackView.snp.bottom).offset(23)
+            $0.leading.trailing.equalToSuperview().inset(16)
         }
     }
 }

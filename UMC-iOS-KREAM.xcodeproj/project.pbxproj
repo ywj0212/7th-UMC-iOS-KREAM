@@ -3,10 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		034052BE2CDC060A006D56DA /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034052BD2CDC0604006D56DA /* MyPageView.swift */; };
+		034052C02CDC0EB3006D56DA /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034052BF2CDC0EAC006D56DA /* MyPageViewController.swift */; };
+		034052C22CDC13DB006D56DA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034052C12CDC13D2006D56DA /* HomeViewController.swift */; };
+		034052C42CDC1429006D56DA /* StyleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034052C32CDC1421006D56DA /* StyleViewController.swift */; };
+		034052C62CDC149C006D56DA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034052C52CDC149C006D56DA /* BaseViewController.swift */; };
+		034052C82CDC1685006D56DA /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034052C72CDC1685006D56DA /* ShopViewController.swift */; };
+		034052CC2CDC16A7006D56DA /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034052CB2CDC16A7006D56DA /* SavedViewController.swift */; };
+		034052CE2CDC37E7006D56DA /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034052CD2CDC37E7006D56DA /* EditProfileViewController.swift */; };
+		034052D02CDC385F006D56DA /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034052CF2CDC385F006D56DA /* EditProfileView.swift */; };
+		034052F52CDC4277006D56DA /* SavedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034052F42CDC4277006D56DA /* SavedView.swift */; };
+		034052FB2CDC4310006D56DA /* GoodsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034052FA2CDC430C006D56DA /* GoodsModel.swift */; };
 		80384E9D2CA3C0AA005BDEA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80384E9C2CA3C0AA005BDEA6 /* AppDelegate.swift */; };
 		80384E9F2CA3C0AA005BDEA6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80384E9E2CA3C0AA005BDEA6 /* SceneDelegate.swift */; };
 		80384EA12CA3C0AA005BDEA6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80384EA02CA3C0AA005BDEA6 /* LoginViewController.swift */; };
@@ -17,6 +28,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		034052BD2CDC0604006D56DA /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
+		034052BF2CDC0EAC006D56DA /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		034052C12CDC13D2006D56DA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		034052C32CDC1421006D56DA /* StyleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleViewController.swift; sourceTree = "<group>"; };
+		034052C52CDC149C006D56DA /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		034052C72CDC1685006D56DA /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
+		034052CB2CDC16A7006D56DA /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
+		034052CD2CDC37E7006D56DA /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		034052CF2CDC385F006D56DA /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
+		034052F42CDC4277006D56DA /* SavedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedView.swift; sourceTree = "<group>"; };
+		034052FA2CDC430C006D56DA /* GoodsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsModel.swift; sourceTree = "<group>"; };
 		0DE193E42E13CE78EA532668 /* Pods-UMC-iOS-KREAM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UMC-iOS-KREAM.release.xcconfig"; path = "Target Support Files/Pods-UMC-iOS-KREAM/Pods-UMC-iOS-KREAM.release.xcconfig"; sourceTree = "<group>"; };
 		80384E992CA3C0AA005BDEA6 /* UMC-iOS-KREAM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMC-iOS-KREAM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80384E9C2CA3C0AA005BDEA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -29,6 +51,11 @@
 		ADC8BB9D2376B3246E650D6E /* Pods_UMC_iOS_KREAM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UMC_iOS_KREAM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEDAB33EE06DB7FCD65B803F /* Pods-UMC-iOS-KREAM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UMC-iOS-KREAM.debug.xcconfig"; path = "Target Support Files/Pods-UMC-iOS-KREAM/Pods-UMC-iOS-KREAM.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		034052D12CDC3990006D56DA /* Assets */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Assets; sourceTree = "<group>"; };
+		034052F62CDC42C6006D56DA /* Cell */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Cell; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		80384E962CA3C0AA005BDEA6 /* Frameworks */ = {
@@ -80,6 +107,8 @@
 		80384E9B2CA3C0AA005BDEA6 /* UMC-iOS-KREAM */ = {
 			isa = PBXGroup;
 			children = (
+				034052F62CDC42C6006D56DA /* Cell */,
+				034052D12CDC3990006D56DA /* Assets */,
 				80384EB62CA3C156005BDEA6 /* ViewControllers */,
 				80384EB32CA3C12E005BDEA6 /* Views */,
 				80384EB02CA3C108005BDEA6 /* Models */,
@@ -94,6 +123,7 @@
 		80384EB02CA3C108005BDEA6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				034052FA2CDC430C006D56DA /* GoodsModel.swift */,
 				80384EB12CA3C11E005BDEA6 /* LoginModel.swift */,
 			);
 			path = Models;
@@ -103,6 +133,9 @@
 			isa = PBXGroup;
 			children = (
 				80384EB42CA3C14D005BDEA6 /* LoginView.swift */,
+				034052F42CDC4277006D56DA /* SavedView.swift */,
+				034052BD2CDC0604006D56DA /* MyPageView.swift */,
+				034052CF2CDC385F006D56DA /* EditProfileView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -110,6 +143,13 @@
 		80384EB62CA3C156005BDEA6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				034052C32CDC1421006D56DA /* StyleViewController.swift */,
+				034052C72CDC1685006D56DA /* ShopViewController.swift */,
+				034052CB2CDC16A7006D56DA /* SavedViewController.swift */,
+				034052CD2CDC37E7006D56DA /* EditProfileViewController.swift */,
+				034052C52CDC149C006D56DA /* BaseViewController.swift */,
+				034052C12CDC13D2006D56DA /* HomeViewController.swift */,
+				034052BF2CDC0EAC006D56DA /* MyPageViewController.swift */,
 				80384EA02CA3C0AA005BDEA6 /* LoginViewController.swift */,
 			);
 			path = ViewControllers;
@@ -131,6 +171,10 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				034052D12CDC3990006D56DA /* Assets */,
+				034052F62CDC42C6006D56DA /* Cell */,
 			);
 			name = "UMC-iOS-KREAM";
 			productName = "UMC-iOS-KREAM";
@@ -230,9 +274,20 @@
 			files = (
 				80384EA12CA3C0AA005BDEA6 /* LoginViewController.swift in Sources */,
 				80384EB22CA3C11E005BDEA6 /* LoginModel.swift in Sources */,
+				034052C02CDC0EB3006D56DA /* MyPageViewController.swift in Sources */,
+				034052C42CDC1429006D56DA /* StyleViewController.swift in Sources */,
+				034052C82CDC1685006D56DA /* ShopViewController.swift in Sources */,
+				034052D02CDC385F006D56DA /* EditProfileView.swift in Sources */,
 				80384E9D2CA3C0AA005BDEA6 /* AppDelegate.swift in Sources */,
 				80384EB52CA3C14D005BDEA6 /* LoginView.swift in Sources */,
+				034052CE2CDC37E7006D56DA /* EditProfileViewController.swift in Sources */,
+				034052FB2CDC4310006D56DA /* GoodsModel.swift in Sources */,
 				80384E9F2CA3C0AA005BDEA6 /* SceneDelegate.swift in Sources */,
+				034052CC2CDC16A7006D56DA /* SavedViewController.swift in Sources */,
+				034052C22CDC13DB006D56DA /* HomeViewController.swift in Sources */,
+				034052C62CDC149C006D56DA /* BaseViewController.swift in Sources */,
+				034052BE2CDC060A006D56DA /* MyPageView.swift in Sources */,
+				034052F52CDC4277006D56DA /* SavedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

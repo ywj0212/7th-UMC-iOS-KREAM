@@ -1,10 +1,10 @@
 import UIKit
 
-class StyleViewController: UIViewController {
+class ShopViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = .blue
     }
     
     
